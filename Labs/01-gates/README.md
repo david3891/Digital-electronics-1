@@ -1,5 +1,6 @@
 # labs 01-gates
 
+## De'Morgans law
 
 | **c** | **b** |**a** | **f(c,b,a)** |
 | :-: | :-: | :-: | :-: |
