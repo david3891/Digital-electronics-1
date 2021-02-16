@@ -1,4 +1,4 @@
-# labs 01-gates
+# Labs 01-gates
 
 ## De'Morgans law
 
@@ -62,6 +62,10 @@ end architecture dataflow;
 ### obrázek
 
 ![De Morgan's law simulation](images/simulationdemorgan.png)
+
+### link na EDA Playground
+
+(https://www.edaplayground.com/x/jVpY)
 
 
 
