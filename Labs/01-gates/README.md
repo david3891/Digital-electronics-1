@@ -116,6 +116,14 @@ end architecture dataflow;
 
 ```
 
+### obrázek
+
+![Distributives laws](images/distributiv.png)
+
+### link na EDA Playground
+
+(https://www.edaplayground.com/x/pPR8)
+
 
 
 
