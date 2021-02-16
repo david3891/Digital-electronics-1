@@ -61,7 +61,7 @@ end architecture dataflow;
 
 ### obrázek
 
-![logo](Images/simulation-demorgan.png) "De Morgan's law simulation"
+![De Morgan's law simulation](Images/simulation-demorgan.png)
 
 
 
