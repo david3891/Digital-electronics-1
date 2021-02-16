@@ -16,6 +16,7 @@
 | 1 | 1 | 1 | 0 |
 
 ### VHDL kód
+
 ```VHDL
 ------------------------------------------------------------------------
 --
@@ -57,6 +58,10 @@ begin
 end architecture dataflow;
 
 ```
+
+### obrázek
+
+![logo](Images/simulation-demorgan.png) "De Morgan's law simulation"
 
 
 
