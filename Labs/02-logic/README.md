@@ -276,7 +276,7 @@ end architecture testbench;
 
 ### Výstup ze simulace
 
-
+![4-bit komparátor](images/simulace.png)
 
 ### Link na EDA Playground
 (https://www.edaplayground.com/x/ADLQ)
