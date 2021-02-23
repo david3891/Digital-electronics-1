@@ -1,6 +1,6 @@
 # 02-LOGIC
 
-## 1) Truth table
+## 1) Pravdivostní tabulka
 
 | **Dec. equivalent** | **B[1:0]** | **A[1:0]** | **B is greater than A** | **B equals A** | **B is less than A** |
 | :-: | :-: | :-: | :-: | :-: | :-: |
