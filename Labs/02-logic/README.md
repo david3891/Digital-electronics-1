@@ -33,7 +33,7 @@
 |           | ***1 1***  | 0     | 0     | 1     | 0     |
 |           | ***1 0***  | 0     | 0     | 0     | 1     |
 
-### ) Karnaughova mapa pro funkci "větší než"
+### 2) Karnaughova mapa pro funkci "větší než"
 
 |           |           |         |  **A1,A0**  |           |           |
 | :-:       | :-:       | :-:     | :-:         | :-:       | :-:       | 
