@@ -274,6 +274,10 @@ begin
 end architecture testbench;
 ```
 
+### Výstup ze simulace
+
+
+
 ### Link na EDA Playground
 (https://www.edaplayground.com/x/ADLQ)
 
