@@ -23,7 +23,7 @@
 
 ## 2) Karnaughovy mapy
 
-### Karnaughova mapa pro funkci "rovno"
+### 1) Karnaughova mapa pro funkci "rovno"
 
 |           |           |         |  **A1,A0**  |           |           |
 | :-:       | :-:       | :-:     | :-:         | :-:       | :-:       | 
@@ -33,7 +33,7 @@
 |           | ***1 1***  | 0     | 0     | 1     | 0     |
 |           | ***1 0***  | 0     | 0     | 0     | 1     |
 
-### 3) Karnaughova mapa pro funkci "větší než"
+### ) Karnaughova mapa pro funkci "větší než"
 
 |           |           |         |  **A1,A0**  |           |           |
 | :-:       | :-:       | :-:     | :-:         | :-:       | :-:       | 
@@ -47,7 +47,7 @@ většíSoP = (B1./A1) + (/A0.B1.B0) + (/A1./A0.B0)
 
 "/" -> negace
 
-### 4) Karnaughova mapa pro funkci "menší než"
+### 3) Karnaughova mapa pro funkci "menší než"
 |           |           |         |  **A1,A0**  |           |           |
 | :-:       | :-:       | :-:     | :-:         | :-:       | :-:       | 
 |           |           | ***0 0*** | ***0 1***     | ***1 1***   | ***1 0***   | 
@@ -60,9 +60,9 @@ menšíPoS = (A1+/B1).(A1+/B0).(A1+A0).(/B1+/B0).(A0+/B1)
 
 "/" -> negace
 
-### 3) 4-bit komparátor
+## 3) 4-bit komparátor
 
-#### VHDL kód (design.vhd)
+### VHDL kód (design.vhd)
 
 ```VHDL
 ------------------------------------------------------------------------
@@ -109,7 +109,7 @@ end architecture Behavioral;
 ```
 
 
-#### VHDL kód (testbench.vhd)
+### VHDL kód (testbench.vhd)
 
 ```VHDL
 ------------------------------------------------------------------------
