@@ -278,6 +278,10 @@ end architecture testbench;
 
 ![4-bit komparator](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/02-logic/images/simulace.PNG)
 
+### vypsaný error
+
+![4-bit komparator](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/02-logic/images/error.PNG)
+
 ### Link na EDA Playground
 (https://www.edaplayground.com/x/ADLQ)
 
