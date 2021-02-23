@@ -1,4 +1,4 @@
-# 02-LOGIC
+# Labs 02-logic
 
 ## 1) Pravdivostní tabulka
 
