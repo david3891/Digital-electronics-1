@@ -60,5 +60,8 @@ menšíPoS = (A1+/B1).(A1+/B0).(A1+A0).(/B1+/B0).(A0+/B1)
 
 "/" -> negace
 
+### EDA Playground (1)
+(https://www.edaplayground.com/x/ADLQ)
+
 
 
