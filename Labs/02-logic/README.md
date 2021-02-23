@@ -173,7 +173,6 @@ begin
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))
         -- If false, then report an error
-      
         report "Test failed for input combination: 0000, 0000" severity error;
         
         
@@ -184,7 +183,6 @@ begin
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))
         -- If false, then report an error
-      
         report "Test failed for input combination: 0000, 0001" severity error;
         
         
@@ -195,7 +193,6 @@ begin
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))
         -- If false, then report an error
-      
         report "Test failed for input combination: 0000, 0010" severity error;
         
         
@@ -206,7 +203,6 @@ begin
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))
         -- If false, then report an error
-      
         report "Test failed for input combination: 0000, 0100" severity error;
         
         
@@ -217,7 +213,6 @@ begin
         -- Expected output
         assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))
         -- If false, then report an error
-      
         report "Test failed for input combination: 1000, 0000" severity error;
         
         
@@ -228,7 +223,6 @@ begin
         -- Expected output
         assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))
         -- If false, then report an error
-      
         report "Test failed for input combination: 1000, 0100" severity error;
         
         
@@ -239,7 +233,6 @@ begin
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '0') and (s_B_less_A = '1'))
         -- If false, then report an error
-      
         report "Test failed for input combination: 0010, 0100" severity error;
         
         
@@ -250,7 +243,6 @@ begin
         -- Expected output
         assert ((s_B_greater_A = '0') and (s_B_equals_A = '1') and (s_B_less_A = '0'))
         -- If false, then report an error
-      
         report "Test failed for input combination: 1000, 1000" severity error;
         
         
@@ -261,7 +253,6 @@ begin
         -- Expected output
         assert ((s_B_greater_A = '1') and (s_B_equals_A = '0') and (s_B_less_A = '0'))
         -- If false, then report an error
-      
         report "Test failed for input combination: 1100, 0100" severity error;
         
        
