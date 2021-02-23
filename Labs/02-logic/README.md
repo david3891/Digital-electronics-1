@@ -44,6 +44,7 @@
 |           | ***1 0***   | 1        | 1           | 0         | 0     |
 
 většíSoP = (B1./A1) + (/A0.B1.B0) + (/A1./A0.B0) 
+
 "/" -> negace
 
 ### 4) Karnaughova mapa pro funkci "menší než"
@@ -56,6 +57,7 @@ většíSoP = (B1./A1) + (/A0.B1.B0) + (/A1./A0.B0)
 |           | ***1 0***   | 0       | 0           | 1         | 0     |
 
 menšíPoS = (A1+A0).(/B1+/B2).(A1+/B1).(A1+/B0).(A0+/B1)
+
 "/" -> negace
 
 
