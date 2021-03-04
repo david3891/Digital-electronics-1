@@ -61,7 +61,6 @@ begin
         
         -- WRITE OTHER TEST CASES HERE
 
-        s_b <= "11"; s_a <= "11"; wait for 100 ns;
 
         -- Report a note at the end of stimulus process
         report "Stimulus process finished" severity note;
