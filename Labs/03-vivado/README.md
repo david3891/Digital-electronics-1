@@ -24,3 +24,48 @@ begin
 
 end architecture Behavioral;
 ```
+
+### b) Výpis stimulačního procesu VHDL ze souboru testbench
+
+```VHDL
+    p_stimulus : process
+    begin
+        -- Report a note at the beginning of stimulus process
+        report "Stimulus process started" severity note;
+
+
+        -- First test values
+        s_d <= "00"; s_c <= "00"; s_b <= "00"; s_a <= "00"; 
+        s_sel <= "00"; wait for 10 ns;
+        
+        s_d <= "10"; s_c <= "01"; s_b <= "01"; s_a <= "00"; 
+        s_sel <= "00"; wait for 10 ns;
+        
+        s_d <= "10"; s_c <= "01"; s_b <= "01"; s_a <= "11"; 
+        s_sel <= "00"; wait for 10 ns;
+        
+        s_d <= "10"; s_c <= "01"; s_b <= "01"; s_a <= "00"; 
+        s_sel <= "01"; wait for 10 ns;
+        
+        s_d <= "10"; s_c <= "01"; s_b <= "11"; s_a <= "00"; 
+        s_sel <= "01"; wait for 10 ns;
+        
+        -- s_d <= "10"; s_c <= "01"; s_b <= "11"; s_a <= "00"; 
+        s_sel <= "10"; wait for 10 ns;
+        
+        -- s_d <= "10"; s_c <= "01"; s_b <= "11"; s_a <= "00"; 
+        s_sel <= "11"; wait for 10 ns;
+
+        
+
+
+        -- Report a note at the end of stimulus process
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+```
+
+
+
+
+
