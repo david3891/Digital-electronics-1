@@ -2,9 +2,9 @@
 
 ## 1) Obrázek s připojeními
 
-![obrázek s připojeními 1](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/2.PNG)
+![obrázek s připojeními 1](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/2.png)
 
-![obrázek s připojeními 2](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/n4r.PNG)
+![obrázek s připojeními 2](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/n4r.png)
 
 ## 2) Dvoubitový široký multiplexer 4 na 1
 
