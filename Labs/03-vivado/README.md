@@ -69,6 +69,10 @@ end architecture Behavioral;
 
 ![obrázek simulace multiplexer 4 na 1](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/simulace.PNG)
 
+## 3) Výukový program Vivado (návod na základy Vivada)
+
+ ()
+
 
 
 
