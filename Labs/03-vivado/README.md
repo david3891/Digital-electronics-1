@@ -71,7 +71,7 @@ end architecture Behavioral;
 
 ## 3) Výukový program Vivado (návod na základy Vivada)
 
- ()
+ (https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/n%C3%A1vod_vivado.pdf)
 
 
 
