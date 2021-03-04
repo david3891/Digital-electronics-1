@@ -65,6 +65,10 @@ end architecture Behavioral;
     end process p_stimulus;
 ```
 
+### c) Screenshot se simulovanými časovými průběhy
+
+![obrázek simulace multiplexer 4 na 1](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/simulace.PNG)
+
 
 
 
