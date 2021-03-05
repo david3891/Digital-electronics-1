@@ -1,6 +1,6 @@
 # Labs 03-vivado
 
-## 1) Obrázek s připojeními
+## 1) Obrázky a tabulky se zapojeními
 
 ![obrázek s připojeními 1](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/2.png)
 
