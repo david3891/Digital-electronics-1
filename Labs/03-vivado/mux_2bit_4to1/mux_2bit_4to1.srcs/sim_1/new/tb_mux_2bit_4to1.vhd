@@ -69,15 +69,6 @@ begin
         
         s_d <= "10"; s_c <= "01"; s_b <= "11"; s_a <= "00"; 
         s_sel <= "01"; wait for 10 ns;
-        
-        -- s_d <= "10"; s_c <= "01"; s_b <= "11"; s_a <= "00"; 
-        s_sel <= "10"; wait for 10 ns;
-        
-        -- s_d <= "10"; s_c <= "01"; s_b <= "11"; s_a <= "00"; 
-        s_sel <= "11"; wait for 10 ns;
-
-        
-
 
         -- Report a note at the end of stimulus process
         report "Stimulus process finished" severity note;
