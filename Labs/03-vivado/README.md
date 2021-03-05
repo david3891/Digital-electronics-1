@@ -27,24 +27,24 @@
 | SW15 | R73 | V10 |
 
 ### LEDs
-| **Leds** | **Connections** | **Resistors (330Ω)** |
-| :-: | :-: | :-: |
-| LED0 | H17 | R33 |
-| LED1 | K15 | R34 |
-| LED2 | J13 | R36 |
-| LED3 | N14 | R39 |
-| LED4 | R18 | R41 |
-| LED5 | V17 | R44 |
-| LED6 | U17 | R47 |
-| LED7 | U16 | R50 |
-| LED8 | V16 | R52 | 
-| LED9 | T15 | R54 | 
-| LED10 | U14 | R57 | 
-| LED11 | T16 | R65 | 
-| LED12 | V15 | R67 | 
-| LED13 | V14 | R70 | 
-| LED14 | V12 | R72 | 
-| LED15 | V11 | R74 |
+| **Leds** | **Resistors (330Ω)** | **Connections** |
+| :-:   | :-: | :-: |
+| LED0  | R33 | H17 |
+| LED1  | R34 | K15 |
+| LED2  | R36 | J13 |
+| LED3  | R39 | N14 |
+| LED4  | R41 | R18 |
+| LED5  | R44 | V17 |
+| LED6  | R47 | U17 |
+| LED7  | R50 | U16 |
+| LED8  | R52 | V16 | 
+| LED9  | R54 | T15 | 
+| LED10 | R57 | U14 | 
+| LED11 | R65 | T16 | 
+| LED12 | R67 | V15 | 
+| LED13 | R70 | V14 | 
+| LED14 | R72 | V12 | 
+| LED15 | R74 | V11 |
 
 ## 2) Dvoubitový široký multiplexer 4 na 1
 
