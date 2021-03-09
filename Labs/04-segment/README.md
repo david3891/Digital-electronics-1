@@ -69,3 +69,54 @@
         end case;
     end process p_7seg_decoder;
 ```
+
+### b) Výpis stimulačního procesu VHDL ze souboru testbench
+
+```VHDL
+ p_stimulus : process
+ begin
+        
+       -- Report a note at the beginning of stimulus process
+        report "Stimulus process started" severity note;
+
+
+        s_hex <= "0000"; wait for 10 ns;
+        
+        s_hex <= "0001"; wait for 10 ns;
+        
+        s_hex <= "0010"; wait for 10 ns;
+        
+        s_hex <= "0011"; wait for 10 ns;
+        
+        s_hex <= "0100"; wait for 10 ns;
+        
+        s_hex <= "0101"; wait for 10 ns;
+        
+        s_hex <= "0110"; wait for 10 ns;
+        
+        s_hex <= "0111"; wait for 10 ns;
+        
+        s_hex <= "1000"; wait for 10 ns;
+        
+        s_hex <= "1001"; wait for 10 ns;
+        
+        s_hex <= "1010"; wait for 10 ns;
+        
+        s_hex <= "1011"; wait for 10 ns;
+        
+        s_hex <= "1100"; wait for 10 ns;
+        
+        s_hex <= "1101"; wait for 10 ns;
+        
+        s_hex <= "1110"; wait for 10 ns;
+        
+        s_hex <= "1111"; wait for 10 ns;
+
+        
+
+        -- Report a note at the end of stimulus process
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+```
+
