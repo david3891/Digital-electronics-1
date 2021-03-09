@@ -200,6 +200,6 @@ hex2seg : entity work.hex_7seg
 
 ### b) Screenshoty se simulovanými časovými průběhy
 
-![obrázek simulace_první část](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/04-segment/images/top1.png)
+![obrázek simulace_první část](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/04-segment/images/top1.PNG)
 
-![obrázek simulace_druhá část](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/04-segment/images/top2.png)
+![obrázek simulace_druhá část](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/04-segment/images/top2.PNG)
