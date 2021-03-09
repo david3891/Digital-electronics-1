@@ -4,7 +4,7 @@
 
 ### a) Obrázek s připojením 7segmentových displejů na desce Nexys A7
 
-![alt text](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/n4r.png)
+![obrázek s připojením](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/n4r.png)
 
 ### b) Pravdivostní tabulka
 | **Hex** | **Inputs** | **A** | **B** | **C** | **D** | **E** | **F** | **G** |
@@ -118,5 +118,25 @@
         report "Stimulus process finished" severity note;
         wait;
     end process p_stimulus;
+```
+
+### c) Screenshot se simulovanými časovými průběhy
+
+![alt text](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/04-segment/images/simulace.png)
+
+### d) Výpis kódu VHDL ze zdrojového souboru instancí 7segmentového modulu0
+
+```VHDL
+hex2seg : entity work.hex_7seg
+        port map(
+            hex_i    => SW,
+            seg_o(6) => CA,
+            seg_o(5) => CB,
+            seg_o(4) => CC,
+            seg_o(3) => CD,
+            seg_o(2) => CE,
+            seg_o(1) => CF,
+            seg_o(0) => CG
+        );
 ```
 
