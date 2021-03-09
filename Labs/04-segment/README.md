@@ -2,7 +2,7 @@
 
 ### A) If we want to turn on the first 7-segment display, we must bring logic 0 to input U13 
 
-![alt text](https://github.com/xsedla1l/Digital-electronics-1/blob/main/Labs/04-adder/Images/image5.png)
+![alt text](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/n4r.png)
 
 ### B) Truth table:
 | **Hex** | **Inputs** | **A** | **B** | **C** | **D** | **E** | **F** | **G** |
