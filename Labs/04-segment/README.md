@@ -125,7 +125,7 @@
 ![obrázek simulace](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/04-segment/images/simulce.PNG)
 
 
-### d) Výpis kódu VHDL ze zdrojového souboru instancí 7segmentového modulu0
+### d) Výpis kódu VHDL ze zdrojového souboru instancí 7segmentového modulu
 
 ```VHDL
 hex2seg : entity work.hex_7seg
@@ -198,6 +198,8 @@ hex2seg : entity work.hex_7seg
                         '1' ;
 ```
 
-### b) Screenshot se simulovanými časovými průběhy
+### b) Screenshoty se simulovanými časovými průběhy
 
-![obrázek simulace](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/04-segment/images/simulace.png)
+![obrázek simulace_první část](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/04-segment/images/top1.png)
+
+![obrázek simulace_druhá část](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/04-segment/images/top2.png)
