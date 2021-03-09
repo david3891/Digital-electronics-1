@@ -1,10 +1,12 @@
+# Labs 04-segment
 
+## 1)
 
-### A) If we want to turn on the first 7-segment display, we must bring logic 0 to input U13 
+### a) Obrázek s připojením 7segmentových displejů na desce Nexys A7
 
 ![alt text](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/n4r.png)
 
-### B) Truth table:
+### B) Pravdivostní tabulka
 | **Hex** | **Inputs** | **A** | **B** | **C** | **D** | **E** | **F** | **G** |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 0 | 0000 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
