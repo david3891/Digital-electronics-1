@@ -6,7 +6,7 @@
 
 ![alt text](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/03-vivado/images/n4r.png)
 
-### B) Pravdivostní tabulka
+### b) Pravdivostní tabulka
 | **Hex** | **Inputs** | **A** | **B** | **C** | **D** | **E** | **F** | **G** |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 0 | 0000 | 0 | 0 | 0 | 0 | 0 | 0 | 1 |
