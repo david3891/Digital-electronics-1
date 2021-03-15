@@ -24,5 +24,82 @@ Když je tlačitko (např. BTNL) rozpojeno, je na vstupu (např. P17) logická 0
 ### a) Výpis VHDL kódu procesu
 
 ```VHDL
+p_cnt_up_down : process(clk)
+    begin
+        if rising_edge(clk) then
+        
+            if (reset = '1') then               -- Synchronous reset
+                s_cnt_local <= (others => '0'); -- Clear all bits
 
+            elsif (en_i = '1') then       -- Test if counter is enabled
+                s_cnt_local <= (others => '0');
+                               
+
+             if (cnt_up_i = '1') then
+                s_cnt_local <= s_cnt_local + 1;
+                
+             else             
+                s_cnt_local <= s_cnt_local - 1;
+                
+             end if;
+
+
+            end if;
+        end if;
+    end process p_cnt_up_down;
 ```
+
+### b) Výpis resetovacích a stimulačních procesů VHDL ze souboru testbench
+
+#### reset
+
+```VHDL
+p_reset_gen : process
+    begin
+        s_reset <= '0';
+        wait for 12 ns;
+        
+        -- Reset activated
+        s_reset <= '1';
+        wait for 73 ns;
+
+        s_reset <= '0';
+        wait;
+    end process p_reset_gen;
+```
+
+#### stimul
+
+```VHDL
+p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+
+        -- Enable counting
+        s_en     <= '1';
+        
+        -- Change counter direction
+        s_cnt_up <= '1';
+        wait for 380 ns;
+        s_cnt_up <= '0';
+        wait for 220 ns;
+
+        -- Disable counting
+        s_en     <= '0';
+
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+```
+
+### c) Screenshot se simulovanými časovými průběhy
+
+![obrázek se simlací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/05-counter/images/simulace.png)
+
+
+
+
+
+
+
+
