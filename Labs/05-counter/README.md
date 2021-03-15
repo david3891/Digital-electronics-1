@@ -94,7 +94,9 @@ p_stimulus : process
 
 ### c) Screenshot se simulovanými časovými průběhy
 
-![obrázek se simlací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/05-counter/images/simulace.png)
+![obrázek se simlací číst 1](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/05-counter/images/simulace_1.PNG)
+
+![obrázek se simlací část 2](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/05-counter/images/simulace_2.PNG)
 
 ## 3)
 
@@ -147,6 +149,11 @@ p_stimulus : process
     -- Connect one common anode to 3.3V
     AN <= b"1111_1110";
 ```
+
+### b) Obrázek horní vrstvy včetně obou čítačů
+
+![obrázek s nákresy čitačů](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/05-counter/images/nakres.png)
+
 
 
 
