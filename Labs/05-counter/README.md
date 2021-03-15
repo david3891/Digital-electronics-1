@@ -19,3 +19,10 @@ Když je tlačitko (např. BTNL) rozpojeno, je na vstupu (např. P17) logická 0
  | 500&nbsp;ms    | 50 000 000    | `x"2FA_F080"`   | `b"10111110101111000010000000"`         |
  | 1&nbsp;sec     | 100 000 000   | `x"5F5_E100"`   | `b"0101_1111_0101_1110_0001_0000_0000"` |
 
+## 2)
+
+### a) Výpis VHDL kódu procesu
+
+```VHDL
+
+```
