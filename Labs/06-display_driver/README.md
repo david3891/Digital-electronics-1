@@ -226,5 +226,5 @@ end architecture Behavioral;
 
 ## 3) Osmimístný ovladač
 
-![obráezek schematu ovladače](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/06-display_driver/images/ovladac.PNG)
+![obráezek schematu ovladače](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/06-display_driver/images/ovladac.jpg)
 
