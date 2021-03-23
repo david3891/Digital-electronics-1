@@ -4,12 +4,11 @@
 
 ![obráezk z prvního bodu](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/06-display_driver/images/prvni_bod.png)
 
+## 2) Ovladač displeje
+
+### a) Výpis VHDL kódu procesu p_mux
 
 
-
-
-
-### a) Obrázek s připojením tlačítek na desce
 
 
 
