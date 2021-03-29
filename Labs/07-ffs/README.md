@@ -179,21 +179,139 @@ p_arst_gen : process
 
 ## 3) Flip-flops
 
-### a) VHDL kód výpis procesů 
+### a) p_d_ff_arst 
 
-#### p_d_ff_arst
+#### VHDL kód výpis procesů 
+
+```VHDL
+p_d_ff_arns : process (clk, arst) 
+    begin                             
+       if (arst = '1') then           
+           q     <= '0';              
+           q_bar <= '1';              
+       elsif rising_edge(clk) then          
+           q     <= d;                
+           q_bar <= not d;            
+       end if;                        
+    end process p_d_ff_arns; 
+```
+
+#### Výpis clock VHDL, resetování a stimulačních procesů ze souborů testbench
+
+```VHDL
+    p_clk_gen : process
+        begin
+            while now < 750 ns loop         -- 75 periods of 100MHz clock
+                s_clk_100MHz <= '0';
+                wait for c_CLK_100MHZ_PERIOD / 2;
+                s_clk_100MHz <= '1';
+                wait for c_CLK_100MHZ_PERIOD / 2;
+            end loop;
+            wait;
+        end process p_clk_gen;
+    
+    p_arst_gen : process
+    begin
+        s_arst <= '0';
+        wait for 58 ns;       
+        
+        -- arst activated
+        s_arst <= '1';
+        wait for 15 ns;
+
+        -- arst deactivated
+        s_arst <= '0';         
+       
+
+        wait;
+    end process p_arst_gen;
+    
+    p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+                 
+          wait for 10 ns;          
+          s_d   <= '1';
+          wait for 10 ns;
+          s_d   <= '0';
+          wait for 10 ns;
+           s_d  <= '1';
+          wait for 10 ns;
+          s_d   <= '0';
+          wait for 10 ns;
+          s_d   <= '1';
+          wait for 10 ns;
+          s_d   <= '0';
+          wait for 10 ns;
+          s_d   <= '1';
+          wait for 10 ns;
+          s_d   <= '0';
+          wait for 10 ns;
+          s_d   <= '1';
+          wait for 10 ns;                   
+                        
+                 
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+    
+    p_assert : process
+    begin
+      wait for 27 ns;
+              
+        -- assert in 27 ns
+        assert(s_q = '0' and s_q_bar = '1')
+        report "Error - conditions in 27 ns are not met" severity error;
+        
+      wait for 53 ns;
+         -- assert in 80 ns
+        assert(s_q = '1' and s_q_bar = '0')
+        report "Error - conditions in 80 ns are not met" severity error;
+       
+    end process p_assert;
+```
+
+### b) p_d_ff_rst
+
+#### VHDL kód výpis procesů
 
 ```VHDL
 
 ```
 
+#### Výpis clock VHDL, resetování a stimulačních procesů ze souborů testbench
 
+```VHDL
 
+```
 
+### c) p_jk_ff_rst
 
+#### VHDL kód výpis procesů
 
+```VHDL
 
+```
 
+#### Výpis clock VHDL, resetování a stimulačních procesů ze souborů testbench
+
+```VHDL
+
+```
+
+### d) p_t_ff_rst
+
+#### VHDL kód výpis procesů
+
+```VHDL
+
+```
+
+#### Výpis clock VHDL, resetování a stimulačních procesů ze souborů testbench
+
+```VHDL
+
+```
 
 
 
