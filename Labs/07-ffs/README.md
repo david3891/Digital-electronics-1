@@ -486,13 +486,124 @@ p_clk_gen : process
 #### VHDL kód výpis procesů
 
 ```VHDL
-
+    p_t_ff_rst : process (clk)
+        begin 
+         
+            if rising_edge(clk) then
+                if (rst = '1') then
+                    s_q <= '0';
+                    
+                else 
+                    if (t = '0') then
+                        s_q <= s_q;
+                        
+                    elsif (t = '1') then
+                        s_q <= not s_q;
+                    
+                    end if;
+                end if;             
+            end if;
+        end process p_t_ff_rst;
+        q       <= s_q;
+        q_bar   <= not s_q; 
 ```
 
 #### Výpis clock VHDL, resetování a stimulačních procesů ze souborů testbench
 
 ```VHDL
+p_clk_gen : process
+    begin
+        while now < 750 ns loop         -- 75 periods of 100MHz clock
+            s_clk_100MHz <= '0';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+            s_clk_100MHz <= '1';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+        end loop;
+        wait;
+    end process p_clk_gen;
+    
+    p_rst_gen : process
+    begin
+        s_rst <= '0';
+        wait for 20 ns;       
+        
+        -- rst activated
+        s_rst <= '1';
+        wait for 15 ns;
 
+        -- rst deactivated
+        s_rst <= '0';         
+       
+
+        wait;
+    end process p_rst_gen;
+    
+    p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+                 
+          wait for 10 ns;          
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1';
+          wait for 10 ns;          
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1';
+           wait for 10 ns;          
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1';
+           wait for 10 ns;          
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1';
+           wait for 10 ns;          
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1'; 
+          wait for 10 ns;          
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1';
+           wait for 10 ns;          
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1';
+           wait for 10 ns;          
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1';
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1';
+           wait for 10 ns;          
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1';
+           wait for 10 ns;          
+          s_t   <= '0';
+           wait for 10 ns;          
+          s_t   <= '1';                                     
+                  
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+    
+    p_assert : process
+    begin
+      wait for 55 ns;
+              
+       
+        assert(s_q = '1' and s_q_bar = '0')
+        report "Error - conditions in 55 ns are not met" severity error;
+        
+      wait for 20 ns;
+      
+        assert(s_q = '0' and s_q_bar = '1')
+        report "Error - conditions in 75 ns are not met" severity error;
+       
+    end process p_assert;
 ```
 
 #### Screenshot se simulovanými časovými průběhy
