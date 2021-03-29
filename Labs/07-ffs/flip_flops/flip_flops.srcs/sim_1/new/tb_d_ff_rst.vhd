@@ -88,21 +88,13 @@ p_clk_gen : process
                  
           wait for 10 ns;          
           s_d   <= '1';
-          wait for 6 ns;
+          wait for 10 ns;
           s_d   <= '0';
-          wait for 6 ns;
+          wait for 10 ns;
            s_d  <= '1';
-          wait for 6 ns;
-          s_d   <= '0';
-          wait for 10 ns;
-          s_d   <= '1';
           wait for 10 ns;
           s_d   <= '0';
           wait for 10 ns;
-          s_d   <= '1';
-          wait for 9 ns;
-          s_d   <= '0';
-          wait for 9 ns;
           s_d   <= '1';
           wait for 10 ns;
           s_d   <= '0';
@@ -112,9 +104,17 @@ p_clk_gen : process
           s_d   <= '0';
           wait for 10 ns;
           s_d   <= '1';
-          wait for 7 ns;
+          wait for 10 ns;
           s_d   <= '0';
-          wait for 9 ns;
+          wait for 10 ns;
+          s_d   <= '1';
+          wait for 10 ns;
+          s_d   <= '0';
+          wait for 10 ns;
+          s_d   <= '1';
+          wait for 10 ns;
+          s_d   <= '0';
+          wait for 10 ns;
           s_d   <= '1';
           wait for 10 ns;                   
                         
@@ -125,16 +125,16 @@ p_clk_gen : process
     
     p_assert : process
     begin
-      wait for 40 ns;
+      wait for 50 ns;
               
         
         assert(s_q = '0' and s_q_bar = '1')
-        report "Error - conditions in 40 ns are not met" severity error;
+        report "Error - conditions in 50 ns are not met" severity error;
         
       wait for 30 ns;
          
         assert(s_q = '1' and s_q_bar = '0')
-        report "Error - conditions in 70 ns are not met" severity error;
+        report "Error - conditions in 80 ns are not met" severity error;
        
     end process p_assert;
 

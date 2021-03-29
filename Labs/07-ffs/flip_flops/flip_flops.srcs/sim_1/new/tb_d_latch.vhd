@@ -79,72 +79,72 @@ p_arst_gen : process
          
           wait for 6 ns;          
           s_d   <= '1';
-          wait for 5 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 8 ns;
+          wait for 6 ns;
            s_d  <= '1';
           wait for 6 ns;
           s_d   <= '0';
-          wait for 9 ns;
+          wait for 6 ns;
           s_d   <= '1';
-          wait for 4 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 5 ns;          
+          wait for 6 ns;          
           
           s_en  <= '1';
           wait for 6 ns;          
           s_d   <= '1';
-          wait for 3 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 10 ns;
+          wait for 6 ns;
           s_d   <= '1';
-          wait for 5 ns;
+          wait for 6 ns;
           s_d   <= '0';
           wait for 6 ns;
           s_d  <= '1';
-          wait for 25 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 15 ns;
+          wait for 6 ns;
           s_en  <= '0';
-          wait for 4 ns;
+          wait for 6 ns;
           s_d  <= '1';
-          wait for 16 ns;
+          wait for 6 ns;
           
           s_en  <= '1';
           wait for 6 ns;          
           s_d   <= '1';
-          wait for 5 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 5 ns;
+          wait for 6 ns;
            s_d  <= '1';
-          wait for 5 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 5 ns;
+          wait for 6 ns;
            s_d  <= '1';
-          wait for 5 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 17 ns;
+          wait for 6 ns;
           
           s_d   <= '1';
-          wait for 10 ns;
+          wait for 6 ns;
           s_en  <= '0';
-          wait for 10 ns;
+          wait for 6 ns;
           s_d   <= '0';          
           wait for 6 ns;          
           s_d   <= '1';
-          wait for 15 ns;
+          wait for 6 ns;
+          s_d   <= '0';
+          wait for 6 ns;
+          s_d  <= '1';
+          wait for 6 ns;
+          s_en  <= '1';
+          wait for 6 ns;
           s_d   <= '0';
           wait for 6 ns;
            s_d  <= '1';
-           wait for 5 ns;
-          s_en  <= '1';
-          wait for 3 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 5 ns;
-           s_d  <= '1';
-          wait for 8 ns;
-          s_d   <= '0';
-          wait for 15 ns;
+          wait for 6 ns;
          
         report "Stimulus process finished" severity note;
         wait;
@@ -152,16 +152,16 @@ p_arst_gen : process
     
    p_assert : process
     begin
-      wait for 80 ns;
+      wait for 100 ns;
               
-        -- assert in 80 ns
-        assert(s_q = '1' and s_q_bar = '0')
-        report "Error - conditions in 80 ns are not met" severity error;
         
-      wait for 45 ns;
-         -- assert in 125 ns
+        assert(s_q = '1' and s_q_bar = '0')
+        report "Error - conditions in 100 ns are not met" severity error;
+        
+      wait for 50 ns;
+         
         assert(s_q = '0' and s_q_bar = '1')
-        report "Error - conditions in 125 ns are not met" severity error;
+        report "Error - conditions in 150 ns are not met" severity error;
        
     end process p_assert;   
 

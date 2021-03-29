@@ -139,11 +139,11 @@ p_clk_gen : process
     
     p_assert : process
     begin
-      wait for 55 ns;
+      wait for 50 ns;
               
        
         assert(s_q = '1' and s_q_bar = '0')
-        report "Error - conditions in 55 ns are not met" severity error;
+        report "Error - conditions in 50 ns are not met" severity error;
         
       wait for 20 ns;
       

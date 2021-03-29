@@ -94,13 +94,13 @@ begin
           wait for 10 ns;          
           s_j   <= '0';
           s_k   <= '0';
-           wait for 20 ns;          
+           wait for 10 ns;          
           s_j   <= '0';
           s_k   <= '1'; 
-           wait for 20 ns;          
+           wait for 10 ns;          
           s_j   <= '1';
           s_k   <= '0'; 
-           wait for 20 ns;          
+           wait for 10 ns;          
           s_j   <= '1';
           s_k   <= '1';                                   
                   
@@ -110,16 +110,16 @@ begin
     
     p_assert : process
     begin
-      wait for 45 ns;
+      wait for 50 ns;
               
         
         assert(s_q = '0' and s_q_bar = '1')
-        report "Error - conditions in 45 ns are not met" severity error;
+        report "Error - conditions in 50 ns are not met" severity error;
         
-      wait for 22.5 ns;
+      wait for 25 ns;
          
         assert(s_q = '0' and s_q_bar = '1' and s_rst = '1')
-        report "Error - conditions in 67,5 ns are not met" severity error;
+        report "Error - conditions in 75 ns are not met" severity error;
        
     end process p_assert;
 
