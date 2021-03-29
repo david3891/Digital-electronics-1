@@ -271,6 +271,10 @@ p_d_ff_arns : process (clk, arst)
     end process p_assert;
 ```
 
+#### Screenshot se simulovanými časovými průběhy
+
+![obrázelk se simulací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/07-ffs/images/simulace3a.PNG)
+
 ### b) p_d_ff_rst
 
 #### VHDL kód výpis procesů
@@ -284,6 +288,10 @@ p_d_ff_arns : process (clk, arst)
 ```VHDL
 
 ```
+
+#### Screenshot se simulovanými časovými průběhy
+
+![obrázelk se simulací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/07-ffs/images/simulace3b.PNG)
 
 ### c) p_jk_ff_rst
 
@@ -299,6 +307,10 @@ p_d_ff_arns : process (clk, arst)
 
 ```
 
+#### Screenshot se simulovanými časovými průběhy
+
+![obrázelk se simulací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/07-ffs/images/simulace3c.PNG)
+
 ### d) p_t_ff_rst
 
 #### VHDL kód výpis procesů
@@ -312,6 +324,10 @@ p_d_ff_arns : process (clk, arst)
 ```VHDL
 
 ```
+
+#### Screenshot se simulovanými časovými průběhy
+
+![obrázelk se simulací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/07-ffs/images/simulace3d.PNG)
 
 
 
