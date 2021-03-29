@@ -39,7 +39,7 @@ q_{n+1}^{JK} = j*/qn + /k*qn
 
 q_{n+1}^T = t*/qn + /t*qn
 
-## 2) D západka
+## 2) D latch
 
 ### a) Výpis kódu VHDL procesu p_d_latch
 
@@ -176,6 +176,16 @@ p_arst_gen : process
 ### c) Screenshot se simulovanými časovými průběhy
 
 ![obrázelk se simulací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/07-ffs/images/simulace1.PNG)
+
+## 3) Flip-flops
+
+### a) VHDL kód výpis procesů 
+
+#### p_d_ff_arst
+
+```VHDL
+
+```
 
 
 
