@@ -86,72 +86,72 @@ p_arst_gen : process
          
           wait for 6 ns;          
           s_d   <= '1';
-          wait for 5 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 8 ns;
+          wait for 6 ns;
            s_d  <= '1';
           wait for 6 ns;
           s_d   <= '0';
-          wait for 9 ns;
+          wait for 6 ns;
           s_d   <= '1';
-          wait for 4 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 5 ns;          
+          wait for 6 ns;          
           
           s_en  <= '1';
           wait for 6 ns;          
           s_d   <= '1';
-          wait for 3 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 10 ns;
+          wait for 6 ns;
           s_d   <= '1';
-          wait for 5 ns;
+          wait for 6 ns;
           s_d   <= '0';
           wait for 6 ns;
           s_d  <= '1';
-          wait for 25 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 15 ns;
+          wait for 6 ns;
           s_en  <= '0';
-          wait for 4 ns;
+          wait for 6 ns;
           s_d  <= '1';
-          wait for 16 ns;
+          wait for 6 ns;
           
           s_en  <= '1';
           wait for 6 ns;          
           s_d   <= '1';
-          wait for 5 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 5 ns;
+          wait for 6 ns;
            s_d  <= '1';
-          wait for 5 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 5 ns;
+          wait for 6 ns;
            s_d  <= '1';
-          wait for 5 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 17 ns;
+          wait for 6 ns;
           
           s_d   <= '1';
-          wait for 10 ns;
+          wait for 6 ns;
           s_en  <= '0';
-          wait for 10 ns;
+          wait for 6 ns;
           s_d   <= '0';          
           wait for 6 ns;          
           s_d   <= '1';
-          wait for 15 ns;
+          wait for 6 ns;
+          s_d   <= '0';
+          wait for 6 ns;
+          s_d  <= '1';
+          wait for 6 ns;
+          s_en  <= '1';
+          wait for 6 ns;
           s_d   <= '0';
           wait for 6 ns;
            s_d  <= '1';
-           wait for 5 ns;
-          s_en  <= '1';
-          wait for 3 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 5 ns;
-           s_d  <= '1';
-          wait for 8 ns;
-          s_d   <= '0';
-          wait for 15 ns;
+          wait for 6 ns;
          
         report "Stimulus process finished" severity note;
         wait;
@@ -159,18 +159,19 @@ p_arst_gen : process
     
    p_assert : process
     begin
-      wait for 80 ns;
+      wait for 100 ns;
               
-        -- assert in 80 ns
-        assert(s_q = '1' and s_q_bar = '0')
-        report "Error - conditions in 80 ns are not met" severity error;
         
-      wait for 45 ns;
-         -- assert in 125 ns
+        assert(s_q = '1' and s_q_bar = '0')
+        report "Error - conditions in 100 ns are not met" severity error;
+        
+      wait for 50 ns;
+         
         assert(s_q = '0' and s_q_bar = '1')
-        report "Error - conditions in 125 ns are not met" severity error;
+        report "Error - conditions in 150 ns are not met" severity error;
        
-    end process p_assert;
+    end process p_assert;   
+
 ```
 
 ### c) Screenshot se simulovanými časovými průběhy
@@ -259,14 +260,14 @@ p_d_ff_arns : process (clk, arst)
     begin
       wait for 27 ns;
               
-        -- assert in 27 ns
+        -- assert in 50 ns
         assert(s_q = '0' and s_q_bar = '1')
-        report "Error - conditions in 27 ns are not met" severity error;
+        report "Error - conditions in 50 ns are not met" severity error;
         
       wait for 53 ns;
-         -- assert in 80 ns
+         -- assert in 50 ns
         assert(s_q = '1' and s_q_bar = '0')
-        report "Error - conditions in 80 ns are not met" severity error;
+        report "Error - conditions in 100 ns are not met" severity error;
        
     end process p_assert;
 ```
@@ -327,21 +328,13 @@ p_clk_gen : process
                  
           wait for 10 ns;          
           s_d   <= '1';
-          wait for 6 ns;
+          wait for 10 ns;
           s_d   <= '0';
-          wait for 6 ns;
+          wait for 10 ns;
            s_d  <= '1';
-          wait for 6 ns;
-          s_d   <= '0';
-          wait for 10 ns;
-          s_d   <= '1';
           wait for 10 ns;
           s_d   <= '0';
           wait for 10 ns;
-          s_d   <= '1';
-          wait for 9 ns;
-          s_d   <= '0';
-          wait for 9 ns;
           s_d   <= '1';
           wait for 10 ns;
           s_d   <= '0';
@@ -351,9 +344,17 @@ p_clk_gen : process
           s_d   <= '0';
           wait for 10 ns;
           s_d   <= '1';
-          wait for 7 ns;
+          wait for 10 ns;
           s_d   <= '0';
-          wait for 9 ns;
+          wait for 10 ns;
+          s_d   <= '1';
+          wait for 10 ns;
+          s_d   <= '0';
+          wait for 10 ns;
+          s_d   <= '1';
+          wait for 10 ns;
+          s_d   <= '0';
+          wait for 10 ns;
           s_d   <= '1';
           wait for 10 ns;                   
                         
@@ -364,16 +365,16 @@ p_clk_gen : process
     
     p_assert : process
     begin
-      wait for 40 ns;
+      wait for 50 ns;
               
-        -- assert in 40 ns
+        
         assert(s_q = '0' and s_q_bar = '1')
-        report "Error - conditions in 40 ns are not met" severity error;
+        report "Error - conditions in 50 ns are not met" severity error;
         
       wait for 30 ns;
-         -- assert in 70 ns
+         
         assert(s_q = '1' and s_q_bar = '0')
-        report "Error - conditions in 70 ns are not met" severity error;
+        report "Error - conditions in 80 ns are not met" severity error;
        
     end process p_assert;
 ```
@@ -413,7 +414,7 @@ p_clk_gen : process
 #### Výpis clock VHDL, resetování a stimulačních procesů ze souborů testbench
 
 ```VHDL
-    p_clk_gen : process
+        p_clk_gen : process
     begin
         while now < 750 ns loop         -- 75 periods of 100MHz clock
             s_clk_100MHz <= '0';
@@ -447,13 +448,13 @@ p_clk_gen : process
           wait for 10 ns;          
           s_j   <= '0';
           s_k   <= '0';
-           wait for 20 ns;          
+           wait for 10 ns;          
           s_j   <= '0';
           s_k   <= '1'; 
-           wait for 20 ns;          
+           wait for 10 ns;          
           s_j   <= '1';
           s_k   <= '0'; 
-           wait for 20 ns;          
+           wait for 10 ns;          
           s_j   <= '1';
           s_k   <= '1';                                   
                   
@@ -463,16 +464,16 @@ p_clk_gen : process
     
     p_assert : process
     begin
-      wait for 45 ns;
+      wait for 50 ns;
               
         
         assert(s_q = '0' and s_q_bar = '1')
-        report "Error - conditions in 45 ns are not met" severity error;
+        report "Error - conditions in 50 ns are not met" severity error;
         
-      wait for 22.5 ns;
+      wait for 25 ns;
          
         assert(s_q = '0' and s_q_bar = '1' and s_rst = '1')
-        report "Error - conditions in 67,5 ns are not met" severity error;
+        report "Error - conditions in 75 ns are not met" severity error;
        
     end process p_assert;
 ```
@@ -592,16 +593,16 @@ p_clk_gen : process
     
     p_assert : process
     begin
-      wait for 55 ns;
+      wait for 50 ns;
               
        
         assert(s_q = '1' and s_q_bar = '0')
-        report "Error - conditions in 55 ns are not met" severity error;
+        report "Error - conditions in 50 ns are not met" severity error;
         
       wait for 20 ns;
       
         assert(s_q = '0' and s_q_bar = '1')
-        report "Error - conditions in 75 ns are not met" severity error;
+        report "Error - conditions in 70 ns are not met" severity error;
        
     end process p_assert;
 ```
