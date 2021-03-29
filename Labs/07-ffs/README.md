@@ -43,6 +43,139 @@ q_{n+1}^T = t*/qn + /t*qn
 
 ### a) Výpis kódu VHDL procesu p_d_latch
 
+```VHDL
+    p_d_latch : process (d, arst, en)
+    begin
+       if (arst = '1') then
+           q     <= '0';
+           q_bar <= '1';
+       elsif (en = '1') then
+           q     <= d;
+           q_bar <= not d;
+       end if;
+    end process p_d_latch;
+```
+
+### b) Výpis resetovacích a stimulačních procesů VHDL ze souboru testbench tb_d_latch.vhd
+
+```VHDL
+p_arst_gen : process
+    begin
+        s_arst <= '0';
+        wait for 10 ns;        
+        
+        -- arst activated
+        s_arst <= '1';
+        wait for 10 ns;
+
+        -- arst deactivated
+        s_arst <= '0';
+        wait for 200 ns;
+        
+        s_arst <= '1';         
+
+        wait;
+    end process p_arst_gen;
+
+         p_stimulus : process
+    begin
+        report "Stimulus process started" severity note;
+            
+          s_en <= '0';
+          s_d <= '0';         
+         
+          wait for 6 ns;          
+          s_d   <= '1';
+          wait for 5 ns;
+          s_d   <= '0';
+          wait for 8 ns;
+           s_d  <= '1';
+          wait for 6 ns;
+          s_d   <= '0';
+          wait for 9 ns;
+          s_d   <= '1';
+          wait for 4 ns;
+          s_d   <= '0';
+          wait for 5 ns;          
+          
+          s_en  <= '1';
+          wait for 6 ns;          
+          s_d   <= '1';
+          wait for 3 ns;
+          s_d   <= '0';
+          wait for 10 ns;
+          s_d   <= '1';
+          wait for 5 ns;
+          s_d   <= '0';
+          wait for 6 ns;
+          s_d  <= '1';
+          wait for 25 ns;
+          s_d   <= '0';
+          wait for 15 ns;
+          s_en  <= '0';
+          wait for 4 ns;
+          s_d  <= '1';
+          wait for 16 ns;
+          
+          s_en  <= '1';
+          wait for 6 ns;          
+          s_d   <= '1';
+          wait for 5 ns;
+          s_d   <= '0';
+          wait for 5 ns;
+           s_d  <= '1';
+          wait for 5 ns;
+          s_d   <= '0';
+          wait for 5 ns;
+           s_d  <= '1';
+          wait for 5 ns;
+          s_d   <= '0';
+          wait for 17 ns;
+          
+          s_d   <= '1';
+          wait for 10 ns;
+          s_en  <= '0';
+          wait for 10 ns;
+          s_d   <= '0';          
+          wait for 6 ns;          
+          s_d   <= '1';
+          wait for 15 ns;
+          s_d   <= '0';
+          wait for 6 ns;
+           s_d  <= '1';
+           wait for 5 ns;
+          s_en  <= '1';
+          wait for 3 ns;
+          s_d   <= '0';
+          wait for 5 ns;
+           s_d  <= '1';
+          wait for 8 ns;
+          s_d   <= '0';
+          wait for 15 ns;
+         
+        report "Stimulus process finished" severity note;
+        wait;
+    end process p_stimulus;
+    
+   p_assert : process
+    begin
+      wait for 80 ns;
+              
+        -- assert in 80 ns
+        assert(s_q = '1' and s_q_bar = '0')
+        report "Error - conditions in 80 ns are not met" severity error;
+        
+      wait for 45 ns;
+         -- assert in 125 ns
+        assert(s_q = '0' and s_q_bar = '1')
+        report "Error - conditions in 125 ns are not met" severity error;
+       
+    end process p_assert;
+```
+
+### c) Screenshot se simulovanými časovými průběhy
+
+![obrázelk se simulací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/07-ffs/images/simulace1.png)
 
 
 
