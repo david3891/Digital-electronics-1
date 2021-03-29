@@ -610,6 +610,10 @@ p_clk_gen : process
 
 ![obrázelk se simulací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/07-ffs/images/simulace3d.PNG)
 
+## 4) Obrázek schématu posuvného registru
+
+![obrázek schematu posuvného registru](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/07-ffs/images/register.PNG)
+
 
 
 
