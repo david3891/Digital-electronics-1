@@ -31,56 +31,56 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity tb_d_ff_arst is
+entity tb_d_ff_rst is
 --  Port ( );
-end tb_d_ff_arst;
+end tb_d_ff_rst;
 
-architecture Behavioral of tb_d_ff_arst is
+architecture Behavioral of tb_d_ff_rst is
 
     constant c_CLK_100MHz_PERIOD : time := 10ns;
 
     signal s_clk_100MHz    : std_logic;
-    signal s_arst  : std_logic;
+    signal s_rst  : std_logic;
     signal s_d     : std_logic;
     signal s_q     : std_logic;
     signal s_q_bar : std_logic;
 begin
 
-    uut_d_ff_arst : entity work.d_ff_arst
+    uut_d_ff_arst : entity work.d_ff_rst
     port map (
         clk    => s_clk_100MHz,
-        arst  => s_arst,
+        arst  => s_rst,
         d     => s_d,
         q     => s_q,
         q_bar => s_q_bar
     );
     
-    p_clk_gen : process
-        begin
-            while now < 750 ns loop         -- 75 periods of 100MHz clock
-                s_clk_100MHz <= '0';
-                wait for c_CLK_100MHZ_PERIOD / 2;
-                s_clk_100MHz <= '1';
-                wait for c_CLK_100MHZ_PERIOD / 2;
-            end loop;
-            wait;
-        end process p_clk_gen;
-    
-    p_arst_gen : process
+p_clk_gen : process
     begin
-        s_arst <= '0';
+        while now < 750 ns loop         -- 75 periods of 100MHz clock
+            s_clk_100MHz <= '0';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+            s_clk_100MHz <= '1';
+            wait for c_CLK_100MHZ_PERIOD / 2;
+        end loop;
+        wait;
+    end process p_clk_gen;
+    
+    p_rst_gen : process
+    begin
+        s_rst <= '0';
         wait for 58 ns;       
         
-        -- arst activated
-        s_arst <= '1';
+        -- rst activated
+        s_rst <= '1';
         wait for 15 ns;
 
-        -- arst deactivated
-        s_arst <= '0';         
+        -- rst deactivated
+        s_rst <= '0';         
        
 
         wait;
-    end process p_arst_gen;
+    end process p_rst_gen;
     
     p_stimulus : process
     begin
@@ -88,13 +88,21 @@ begin
                  
           wait for 10 ns;          
           s_d   <= '1';
-          wait for 10 ns;
+          wait for 6 ns;
           s_d   <= '0';
-          wait for 10 ns;
+          wait for 6 ns;
            s_d  <= '1';
+          wait for 6 ns;
+          s_d   <= '0';
+          wait for 10 ns;
+          s_d   <= '1';
           wait for 10 ns;
           s_d   <= '0';
           wait for 10 ns;
+          s_d   <= '1';
+          wait for 9 ns;
+          s_d   <= '0';
+          wait for 9 ns;
           s_d   <= '1';
           wait for 10 ns;
           s_d   <= '0';
@@ -103,6 +111,10 @@ begin
           wait for 10 ns;
           s_d   <= '0';
           wait for 10 ns;
+          s_d   <= '1';
+          wait for 7 ns;
+          s_d   <= '0';
+          wait for 9 ns;
           s_d   <= '1';
           wait for 10 ns;                   
                         
@@ -113,16 +125,16 @@ begin
     
     p_assert : process
     begin
-      wait for 27 ns;
+      wait for 40 ns;
               
         
         assert(s_q = '0' and s_q_bar = '1')
-        report "Error - conditions in 27 ns are not met" severity error;
+        report "Error - conditions in 40 ns are not met" severity error;
         
-      wait for 53 ns;
+      wait for 30 ns;
          
         assert(s_q = '1' and s_q_bar = '0')
-        report "Error - conditions in 80 ns are not met" severity error;
+        report "Error - conditions in 70 ns are not met" severity error;
        
     end process p_assert;
 
