@@ -175,7 +175,7 @@ p_arst_gen : process
 
 ### c) Screenshot se simulovanými časovými průběhy
 
-![obrázelk se simulací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/07-ffs/images/simulace1.png)
+![obrázelk se simulací](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/07-ffs/images/simulace1.PNG)
 
 
 
