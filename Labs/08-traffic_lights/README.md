@@ -157,7 +157,24 @@ p_output_fsm : process(s_state)
     end process p_output_fsm;
 ```
 
-### b) Screenshoty simulace
+### d) Screenshoty simulace
 
 ![obrázelk se stavovým diagramem](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/08-traffic_lights/images/simulace.PNG)
+
+## 3) Inteligentní ovladač
+
+### b) Stavový diagram
+
+![obrázelk se stavovým diagramem](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/08-traffic_lights/images/diagram2.PNG)
+
+### c) Výpis VHDL kódu sekvenčního procesu p_smart_traffic_fsm
+
+```VHDL
+
+```
+
+
+
+
+
 
