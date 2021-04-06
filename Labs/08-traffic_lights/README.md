@@ -18,3 +18,9 @@
 | :-: | :-: | :-: | :-: | :-: |
 | LD16 | N15, M16, R12 | `1,0,0` | `1,1,0` | `0,1,0` |
 | LD17 | N16, R11, G14 | `1,0,0` | `1,1,0` | `0,1,0` |
+
+## 1) Ovladač semaforu
+
+### a) Stavový diagram
+
+![obrázelk se stavovým diagramem](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/08-traffic_lights/images/diagram.PNG)
