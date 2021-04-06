@@ -1,6 +1,6 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b3e08e751f62467c844a46e17b901836 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_tlc_behav xil_defaultlib.tb_tlc -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto b3e08e751f62467c844a46e17b901836 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_p_smart_traffic_fsm_behav xil_defaultlib.tb_p_smart_traffic_fsm -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
