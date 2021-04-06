@@ -27,4 +27,8 @@
 
 ### a) Výpis VHDL kódu sekvenčního procesu p_traffic_fsm
 
+```VHDL
+
+```
+
 
