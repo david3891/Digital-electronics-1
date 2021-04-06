@@ -181,7 +181,47 @@ p_smart_traffic_fsm : process(clk)
 
             elsif (s_en = '1') then
             
-                if ((sens_S_i = '1') and (sens_W_i = '0')) then
+            
+                 if ((sens_S_i = '0') and (sens_W_i = '0')) then 
+                       s_state <= s_state;
+                       
+                 elsif ((sens_S_i = '0') and (sens_W_i = '1')) then 
+                           
+                      case s_state is
+                      
+                            when SOUTH_GO =>
+                                if (s_cnt < c_DELAY_4SEC) then
+                                    s_cnt <= s_cnt + 1;
+                                else
+                                    s_state <= SOUTH_WAIT;
+                                    s_cnt   <= c_ZERO;
+                                end if;
+                                
+                            when SOUTH_WAIT =>
+                                if (s_cnt < c_DELAY_2SEC) then
+                                    s_cnt <= s_cnt + 1;
+                                else
+                                    s_state <= STOP1;
+                                    s_cnt   <= c_ZERO;
+                                end if;
+                                
+                            when STOP1 =>
+                                if (s_cnt < c_DELAY_1SEC) then
+                                    s_cnt <= s_cnt + 1;
+                                else
+                                    s_state <= WEST_GO;
+                                    s_cnt   <= c_ZERO;
+                                end if;
+                                
+                            when others =>
+                                s_state <= WEST_GO;  
+                                 
+                      end case; 
+                      
+                      
+                      
+            
+                elsif ((sens_S_i = '1') and (sens_W_i = '0')) then
                  
                       case s_state is
                     
@@ -214,49 +254,8 @@ p_smart_traffic_fsm : process(clk)
                                                   
                       end case;
                                               
-                   
-                    
-                    
-                 elsif ((sens_S_i = '0') and (sens_W_i = '1')) then 
-                           
-                      case s_state is
-                      
-                            when SOUTH_GO =>
-                                if (s_cnt < c_DELAY_4SEC) then
-                                    s_cnt <= s_cnt + 1;
-                                else
-                                    s_state <= SOUTH_WAIT;
-                                    s_cnt   <= c_ZERO;
-                                end if;
-                                
-                            when SOUTH_WAIT =>
-                                if (s_cnt < c_DELAY_2SEC) then
-                                    s_cnt <= s_cnt + 1;
-                                else
-                                    s_state <= STOP1;
-                                    s_cnt   <= c_ZERO;
-                                end if;
-                                
-                            when STOP1 =>
-                                if (s_cnt < c_DELAY_1SEC) then
-                                    s_cnt <= s_cnt + 1;
-                                else
-                                    s_state <= WEST_GO;
-                                    s_cnt   <= c_ZERO;
-                                end if;
-                                
-                            when others =>
-                                s_state <= WEST_GO;  
-                                 
-                      end case;                     
-                 
-
-
-
-
-                
-                 elsif ((sens_S_i = '0') and (sens_W_i = '0')) then 
-                       s_state <= s_state;
+                                              
+                                              
                  
                  elsif ((sens_S_i = '1') and (sens_W_i = '1')) then 
                             
