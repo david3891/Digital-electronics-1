@@ -12,3 +12,4 @@
 
 ### b) Obrázek s připojením RGB LED na desce Nexys A7 a vyplněnou tabulkou s nastavením barev
 
+![obrázelk se zapojením](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/08-traffic_lights/images/zapojeni.PNG)
