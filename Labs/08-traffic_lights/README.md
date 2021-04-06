@@ -13,3 +13,8 @@
 ### b) Obrázek s připojením RGB LED na desce Nexys A7 a vyplněnou tabulkou s nastavením barev
 
 ![obrázelk se zapojením](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/08-traffic_lights/images/zapojeni.PNG)
+
+| **RGB LED** | **Artix-7 pin names** | **Red** | **Yellow** | **Green** |
+| :-: | :-: | :-: | :-: | :-: |
+| LD16 | N15, M16, R12 | `1,0,0` | `1,1,0` | `0,1,0` |
+| LD17 | N16, R11, G14 | `1,0,0` | `1,1,0` | `0,1,0` |
