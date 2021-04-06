@@ -24,3 +24,7 @@
 ### a) Stavový diagram
 
 ![obrázelk se stavovým diagramem](https://github.com/david3891/Digital-electronics-1/blob/main/Labs/08-traffic_lights/images/diagram.PNG)
+
+### a) Výpis VHDL kódu sekvenčního procesu p_traffic_fsm
+
+
